@@ -1,0 +1,144 @@
+*{
+  margin:0;
+  padding:0;
+  outline:none;
+  font-family:'Helvetica Neue', Helvetica Neue, Arial, sans-serif;
+  color:black;
+  resize:none;
+}
+.wrapper, body{
+  transition: all 0.2s;
+}
+body{
+  text-align: center;
+  background:#CDFD9A;
+}
+body img#logo{
+  width:200px;
+  height: auto;
+}
+body img#logo.control{
+  width:100px;
+  height: auto;
+}
+#number{
+  font-weight: 500;
+  font-size: 32rem;
+  text-align: center;
+  letter-spacing: -3px;
+}
+#url{
+  font-size: 20pt;
+  top:20px;
+  position: relative;
+}
+#arrow{
+  position: fixed;
+  display: block;
+  right: -50px;
+  bottom: -30px;
+  z-index: 9999;
+  opacity: 0.1;
+  width: 108%;
+}
+.wrapper{
+  padding: 10px;
+  background: #CDFD9A;
+  box-sizing: border-box;
+  overflow: auto;
+  max-width: 100%;
+  height: calc(100vh - 16px);
+}
+
+/* control screen */
+.control h1{
+  font-weight: 400;
+  font-size: 36px;
+  letter-spacing: -1px;
+}
+.control a, .control input[type='submit']{
+  width: 280px;
+  padding: 20px;
+  display: block;
+  margin: 0 auto;
+  background: black;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 5px;
+  font-size: 13px;
+  transition: all 0.2s;
+  border:none;
+  cursor: pointer;
+}
+.control input[type='password']{
+  width: 240px;
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 12px;
+}
+.control a, .control input[type='submit']:hover{
+  opacity:0.85;
+}
+.control a, .control input[type='submit']:active{
+  margin-top:3px;
+}
+.control select{
+    width: 280px;
+    padding: 22px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background: white;
+    height: 65px;
+    border:1px solid black;
+}
+.control .label{
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: -10px;
+}
+.control #sessionrunning{
+  margin-top:10px;
+}
+.control #secondsleft{
+  font-weight: bold;
+}
+#loading{
+  background:url('../img/loading.gif') rgba(205,253,154,0.85);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 99999999999999;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40px;
+}
+
+@media only screen and (max-width: 850px) {
+  #number{
+    font-size: 20rem;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  #number{
+    font-size: 15rem;
+  }
+}
+
+@media only screen and (max-height: 650px) {
+  #arrow{
+    display: none;
+  }
+}
+
+#hidden{
+  display: none;
+  opacity:0;
+  visibility: hidden;
+}

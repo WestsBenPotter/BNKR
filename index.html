@@ -1,0 +1,66 @@
+<!doctype html>
+  <html>
+  <head>
+    <title>BNKR - Countdown</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery-3.6.4.min.js"></script>
+    <meta name="viewport" content="initial-scale=1.0">
+    <script type="text/javascript">
+    $( document ).ready(function() {
+    function doEvery500(){
+        //get ajax data
+        var response = '';
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:8888/ajax.php",
+            async: false,
+                 success : function(text)
+             {
+                 response = text;
+             }
+        });
+        //readit
+        var newresponse = String(response);
+        //write it to the invisible div
+        document.getElementById('hidden').innerHTML = newresponse;
+        //read the specifics of each element
+        var settime = $("#settime").html();
+        var currenttime = $("#currenttime").html();
+        var secondstogo = $("#secondstogor").html();
+        var sessionlength = $("#sessionlength").html();
+        var sessionrotations = $("#sessionrotations").html();
+        var displaynumber = $("#displaynumber").html();
+        var sessioncooldown = $("#sessioncooldown").html();
+        //set the time
+        document.getElementById('number').innerHTML = displaynumber;
+        //make colour
+        if(Number(secondstogo) < 1){
+            $(".wrapper, body").css('background', '#CDFD9A');
+        }else{
+          if( Number(displaynumber) <  Number(sessioncooldown) ){
+            $(".wrapper, body").css('background', '#e40032');
+          }else{
+            $(".wrapper, body").css('background', '#CDFD9A');
+          }
+        }
+      };
+      doEvery500();
+      setInterval(function() {
+          doEvery500();
+      }, 500);
+    });
+
+    </script>
+  </head>
+  <body style="transition:background 1s ease 0s;">
+    <div id="hidden"></div>
+    <div class="wrapper" style="transition:background 1s ease 0s;">
+      <div class="content">
+        <span id="number">0</span><br />
+        <br />
+        <img id="arrow" src="img/logo.png" alt="BNKR Arrow" width="400" />
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="js/main.js"></script>
+</html>
