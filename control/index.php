@@ -34,15 +34,15 @@ foreach($result as $item){
   <html>
   <head>
     <title>BNKR - Countdown Control</title>
-    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="application-name" content="MyApp" />
     <meta name="apple-mobile-web-app-title" content="MyApp" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <link rel="apple-touch-icon" href="img/app-icon.png" />
-    <script type="text/javascript" src="js/jquery-3.6.4.min.js"></script>
+    <link rel="apple-touch-icon" href="../img/app-icon.png" />
+    <script type="text/javascript" src="../js/jquery-3.6.4.min.js"></script>
     <script type="text/javascript">
     $( document ).ready(function() {
 
@@ -123,7 +123,7 @@ VALUES ("'.$IP.'", "'.$NowTimeSec.'", "'.$FutureTimeSec.'")';
         };
         if($sessionActive  == 'true'){
         ?>
-        <h1><img id="logo" src="img/logo.png" alt="BNKR Logo" width="25" class="control"/> Control</h1>
+        <h1><img id="logo" src="../img/logo.png" alt="BNKR Logo" width="25" class="control"/> Control</h1>
         <br />
         <div id="beginsession">
           <form id="beginsession" action="http://localhost:8888/BNKR/startsession.php" method="post">
@@ -156,5 +156,5 @@ VALUES ("'.$IP.'", "'.$NowTimeSec.'", "'.$FutureTimeSec.'")';
       </div>
     </div>
   </body>
-  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="../js/main.js"></script>
 </html>

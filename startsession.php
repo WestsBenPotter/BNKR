@@ -16,6 +16,6 @@ $query = "UPDATE $table
           SET `time` = $time, `sessionrotations` = $sessionrotations, `sessionlength` = $sessionlength
           WHERE `ID` = '1'";
 mysqli_query($con , $query);
-header("location: http://localhost:8888/BNKR/control.php");
+header("location: http://localhost:8888/BNKR/control/");
 mysqli_close($con);
 ?>
