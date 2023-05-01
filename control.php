@@ -57,7 +57,7 @@ foreach($result as $item){
       var response = '';
       $.ajax({
           type: "GET",
-          url: "http://localhost:8888/ajax.php",
+          url: "http://localhost:8888/BNKR/ajax.php",
           async: false,
                success : function(text)
            {
@@ -126,7 +126,7 @@ VALUES ("'.$IP.'", "'.$NowTimeSec.'", "'.$FutureTimeSec.'")';
         <h1><img id="logo" src="img/logo.png" alt="BNKR Logo" width="25" class="control"/> Control</h1>
         <br />
         <div id="beginsession">
-          <form id="beginsession" action="http://localhost:8888/startsession.php" method="post">
+          <form id="beginsession" action="http://localhost:8888/BNKR/startsession.php" method="post">
             <span class="label">interval length:</span><br />
 
             <select id="sessionlength" name="sessionlength">
